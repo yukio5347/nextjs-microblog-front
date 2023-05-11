@@ -1,72 +1,17 @@
-# Next.js Boilerplate
+# Onchain Micro Blog
 
-This is a boilerplate for Next.js apps with following tools:
-- TypeScript
-- TailwindCSS
-- ESLint with Prettier
-- Husky hook with lint-staged
-- Prisma
+This is an micro blogging app on the Sepolia testnet.
 
-## Initialization
+[DEMO](https://nextjs-microblog-front.vercel.app/ "DEMO")
 
-#### Clone the repository and go to the project directory
+### SepoliaETH
 
-```bash
-git clone git@github.com:yukio5347/nextjs-boilerplate.git YOUR_PROJECT_NAME
-cd YOUR_PROJECT_NAME && git remote remove origin
-```
+You can get 1 SepoliaETH per day with Alchemy's Sepolia Faucet.
 
-#### Install packages
+[Sepolia Faucet](https://sepoliafaucet.com/ "Sepolia Faucet")
 
-```bash
-npm install
-```
+### Contract
 
-#### Run local server
+This app uses the contract built with Hardhat.
 
-```bash
-npm run dev
-```
-
-## Configurations
-
-### Database
-
-#### .env
-
-Create `.env` file and set `DATABASE_URL` variable.
-
-```bash
-cp .env.example .env
-```
-
-#### Schema
-
-Edit `prisma/schema.prisma` to define models.
-
-If you want to change the provider, modify `provider` property.
-
-```prisma
-datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
-}
-```
-
-#### Generate the prisma client
-
-After editing the schema file, generate the prisma client.
-
-```bash
-npx prisma generate
-```
-
-#### Seeding
-
-Edit `prisma/seed.ts` to define the seeder.
-
-After editing the seeder file, run the db seed command.
-
-```bash
-npx prisma db seed
-```
+[https://github.com/yukio5347/hardhat-microblog-contract](https://github.com/yukio5347/hardhat-microblog-contract)
